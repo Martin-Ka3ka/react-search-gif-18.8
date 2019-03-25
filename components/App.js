@@ -8,6 +8,7 @@ App = React.createClass({
       searchingText: '',
       gif: {}
     };
+    
   },
   handleSearch: function (searchingText) {  // 1.
     this.setState({
@@ -51,7 +52,7 @@ App = React.createClass({
       <div style={styles}>
         <h1>Wyszukiwarka GIFow!</h1>
         <p>Znajdź gifa na <a href='http://giphy.com'>giphy</a>. Naciskaj enter, aby pobrać kolejne gify.</p>
-        <Search onSearch={this.handleSearch}/>
+        <Search onSearch={this.handleSearch} />
         <Gif
           loading={this.state.loading}
           url={this.state.gif.url}
